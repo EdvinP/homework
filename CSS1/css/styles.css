@@ -1,0 +1,19 @@
+
+h1 {
+    color: deeppink;
+}
+
+.concept-description {
+    font-family: serif;
+    width: 550px
+}
+
+h2 {
+    color: deeppink;
+}
+
+.product-description {
+    color: rosybrown;
+    width: 550px;
+    font-family: sans-serif
+}
