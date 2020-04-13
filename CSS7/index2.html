@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalendorius</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .main_title {
+            position: relative;
+            height: 50px;
+            font-size: 40px;
+            text-shadow: 5px 3px grey;
+            text-transform: uppercase;
+        }
+
+        .calendar {
+            max-height: 350px;
+            overflow: hidden;
+        }
+
+        .calendar__row {
+            width: 100%;
+        }
+
+        .calendar__row div {
+            display: inline-table;
+            box-shadow: 1px 3px grey;
+            width: 100px;
+            height: 100px;
+            margin: 0.5px;
+        }
+
+        .calendar__empty {
+            padding-bottom: 200px;
+        }
+
+        .calendar__row--orange {
+            background-color: darkorange;
+        }
+
+        .event {
+            position: relative;
+            top: 30px;
+            right: 5px;
+            font-size: 12px;
+        }
+
+        .event:hover {
+            background-color: yellow;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="main_title">
+        Rugpjutis
+    </div>
+    <div class="calendar">
+        <div class="calendar__row">
+            <div>&nbsp;</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div class="calendar__row--orange">5</div>
+            <div class="calendar__row--orange">
+                <span>6</span>
+                <span class="calendar__row event">Vilnius running</span>
+            </div>
+        </div>
+        <div class="calendar__row">
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>
+                <span>10</span>
+                <span class="calendar_row event">Concert</span>
+            </div>
+            <div>11</div>
+            <div class="calendar__row--orange">12</div>
+            <div class="calendar__row--orange">13</div>
+        </div>
+        <div class="calendar__row">
+            <div>14</div>
+            <div>15</div>
+            <div>16</div>
+            <div>17</div>
+            <div>18</div>
+            <div class="calendar__row--orange">
+                <span>19</span>
+                <span class="calendar__row event">Summer festival</span>
+            </div>
+            <div class="calendar__row--orange">20</div>
+        </div>
+        <div class="calendar__row">
+            <div>21</div>
+            <div>22</div>
+            <div>23</div>
+            <div>24</div>
+            <div>25</div>
+            <div class="calendar__row--orange">26</div>
+            <div class="calendar__row--orange">27</div>
+        </div>
+    </div>
+    </body>
+    </html>
