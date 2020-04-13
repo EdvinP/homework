@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS9</title>
+    <style>
+
+        .main-page {
+            display: flex;
+            flex-direction: row;
+
+
+        }
+
+        .main__container {
+            width: 200px;
+            height: 420px;
+            margin: 10px;
+            box-shadow: 2px 3px grey;
+            border: 2px solid white;
+
+        }
+
+        .main__container:hover {
+            box-shadow: 2px 3px blue;
+        }
+
+        .main__container > span {
+            display: flex;
+            flex-direction: column;
+            padding: 2px 2px 0px 5px;
+        }
+
+        .main__cointainer-title {
+            color: cornflowerblue;
+        }
+
+        .main__container-attribute {
+            font-family: cursive;
+            color: gray
+
+
+        }
+
+        .second {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 150px;
+        }
+
+        .attribute_price {
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        .price_line-through {
+            font-size: 15px;
+            text-decoration: line-through
+        }
+
+        #uzsakyti {
+            background-color:forestgreen;
+            border: none;
+            color: white;
+            width: 100px;
+            height: 40px;
+        }
+
+        .additional_information {
+            font-family: cursive;
+            color: grey;
+            font-size: 12px;
+            margin-top: 10px;
+            width: 150px
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main-page" >
+        <div class="main__container">
+            <img src="images/css_9_computers_1.jpg" alt="Kompiuteris Asus">
+            <span class="main__cointainer-title">
+                Nešiojimas kompiuteris ASUS K540NA
+            </span>
+            <span class="main__container-attribute">Atmintinė (RAM) (GB):4</span>
+            <span class="main__container-attribute second">Įstrižainė: 15.6 (39.6 colio)
+            </span>
+            <span class="attribute_price">259,00 &euro;</span>
+            <span class="price_line-through">359,00 &euro;</span>
+            <input type="button" value="Užsakyti" id="uzsakyti">
+            <span class="additional_information"> +7.01 &euro; Kompensacinis atlyginimas autoriams</span>
+        </div>
+        <div class="main__container">
+            <img src="images/css_9_computers_2.jpg">
+            <span class="main__cointainer-title">
+                Nešiojimas kompiuteris LENOVO V110-15IAP
+            </span>
+            <span class="main__container-attribute">Atmintinė (RAM) (GB):4</span>
+            <span class="main__container-attribute second">Įstrižainė: 15.6 (39,6coliosdasdasdasd)</span>
+            <span class="attribute_price">199,99 &euro;</span>
+            <span class="price_line-through">349,99 &euro;</span>
+            <input type="submit" value="Užsakyti" id="uzsakyti">
+            <span class="additional_information"> +7.01 &euro; Kompensacinis atlyginimas autoriams</span></div>
+        <div class="main__container">
+            <img src="images/css_9_computers_3.jpg">
+            <span class="main__cointainer-title">
+                Nešiojimas kompiuteris DELL Inspiron 15 3573
+            </span>
+            <span class="main__container-attribute">Atmintinė (RAM) (GB):4</span>
+            <span class="main__container-attribute second">Įstrižainė: 15.6 (39,6colio)</span>
+            <span class="attribute_price">299,00 &euro;</span>
+            <span class="price_line-through">399,00 &euro;</span>
+            <input type="button" value="Užsakyti" id="uzsakyti">
+            <span class="additional_information"> +7.01 &euro; Kompensacinis atlyginimas autoriams</span></div>
+    </div>
+</body>
+</html>
