@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS8</title>
+    <style>
+
+        .content {
+            background-color: burlywood;
+            height: 400px;
+            width: 800px;
+        }
+
+        .content__header {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 5px
+
+        }
+
+        .content__header-label {
+            display: flex;
+            flex-direction: column;;
+            width: 50%;
+
+
+        }
+
+        .content__header-label
+
+        .content__header-input {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+        }
+
+        .content__header-button  {
+            width: 600px;
+        }
+        #siusti {
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Registracija į renginį</h2>
+    <div class="content">
+        <div>Registracijos forma</div>
+        <div>Jeigu norite užsiregistruoti į renginį užpildikyte žemiau esančia forma. Žemiau lentelėje galite matyti jau užsiregistravusius dalyvius</div>
+        <form>
+            <div class="content__header">
+                <div class="content__header-label">
+                    <label for="vardas">Vardas</label>
+                    <label for="pavardė">Pavardė</label>
+                    <label for="pavardė">Elektroninis paštas</label>
+                </div>
+                <div class="content__header-input">
+                    <input type="text" id="vardas">
+                    <input type="text" id="pavardė">
+                    <input type="email" id="email">
+                </div>
+                <div class=content__header-button>
+                    <input type="submit" value="Registruoti" id="siusti">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
