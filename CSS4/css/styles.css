@@ -6,6 +6,7 @@
 
 .main-logo {
     text-align: center;
+    padding: 10px;
 }
 
 .main-horizontal-rule {
@@ -16,14 +17,16 @@
 }
 
 .menu-items {
-    text-align: center;
+    margin:auto;
+    width: 40%;
     font-family:monospace;
-
 }
 
 .menu-items li {
     text-transform: uppercase;
     display: inline;
+    margin: 10px;
+    flex-direction: left
 }
 
 .menu-items .menu-items-main-page {
@@ -44,6 +47,6 @@
 }
 
 .main-page-description {
-    font-family: monospace;
-    text-align: center;
+    margin: auto;
+    width: 50%;
 }
