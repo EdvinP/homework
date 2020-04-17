@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS8</title>
+</head>
+
+<body>
+    <div>
+        <button id="enter-your-age" onclick="triggerPrompt()">Patikrinti amziu</button>
+        <p id="answer"></p>
+    </div>
+
+    <script>
+
+    var minAge = '';
+
+
+
+
+    function triggerPrompt() {
+        minAge = Number(prompt('Iveskite amziu'));
+        validateInput();
+
+    }
+    function validateInput(){
+        if(minAge >= 18) {
+            alert('Uzeiti galima');
+        }else {
+            alert('Uzeiti negalima');
+        }
+    }
+
+   // minAge = prompt('Iveskite amziu');
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
