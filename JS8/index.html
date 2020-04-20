@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS8</title>
+</head>
+
+<body>
+
+
+
+    <script>
+                var listOfNames = ['Jonas', 'Petras', 'Martynas', 'Ona', 'Urtė', 'Ema'];
+
+
+                function writeName(name, array) {
+
+                var random = array.indexOf(name);
+                array.splice(random,1);
+                document.write(array);
+                }
+                writeName('Ona', listOfNames);
+
+    </script>
+</body>
+</html>
