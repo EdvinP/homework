@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js10</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        .gallery {
+            width: 200px;
+        }
+        @media screen and (max-width: 600px) {
+            .gallery {
+            width: 100%;
+            }
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+
+</head>
+
+<body>
+    <div class="main-content">
+        <h1>Galerija</h1>
+        <div>
+        </div>
+    </div>
+    <script>
+
+    var $images = ["https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/bycycle.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/chess.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/jump.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/kiting.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/lion.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/onwater.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/para.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/photographer.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/pieva.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/supynes.jpg",];
+
+     $(document).ready(function() {
+
+
+        $('.main-content > div').addClass('container');
+        for(var i = 0 ; i < $images.length ; i++) {
+                var img = $('<img class="gallery" alt="foto">');
+                img.attr('src', $images[i]);
+                $('.container').append(img);
+
+            };
+     });
+
+
+
+
+
+    </script>
+</body>
+</html>
