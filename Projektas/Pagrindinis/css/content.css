@@ -1,0 +1,165 @@
+.content {
+    position: relative;
+    margin:10px,0 ,0,0 ;
+    margin: 70px;
+
+}
+
+.content_img{
+    width: 100%;
+    opacity: 0.85;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    color: white;
+    background: rgba (0,0,0,0.8);
+}
+
+
+.content_title1 {
+    position: absolute;
+    top:0px;
+    font-size: 50px;
+    Background: rgba(244, 87, 36, 0.45);
+    width: 100%;
+    padding: 40px 0 40px 0px;
+    animation-name: slide;
+    animation-duration: 5s;
+
+}
+
+
+
+.content_title2 {
+    position: relative;
+    display: block;
+    text-align: center;
+    animation-name: slide;
+    animation-duration: 5s;
+    padding: 20px 0 30px 0;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;}
+    to {
+        opacity: 1;}
+    }
+
+.hr {
+    width: 30%;
+    position: relative;
+    animation-name: slide;
+    animation-direction: 5s;
+}
+
+
+.content_title2-description {
+    position:relative;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    animation-name: slide;
+    animation-duration: 5s;
+    padding : 20px 0 0 0;
+
+}
+.title-of-images {
+    text-align: center;
+    color: white;
+    margin:40px 400px 20px; 400px;
+    font-size: 50px;
+    padding: 0 0 40px 0;
+}
+.hr-yellow {
+    height: 2px;
+    width: 30%;
+    background: #F45724;
+    border:none;
+}
+
+.images {
+    display: flex;
+    padding: 35px;
+
+}
+.row {
+    flex: 33.33%;
+    padding: 20px;
+    margin:10px;
+    box-shadow: 0 4px 5px 1px rgba(0, 0, 0, 0.4), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.row img {
+    width: 100%;
+}
+
+
+.link {
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    padding: 30px;
+    font-weight: bold;
+    background-color: rgba(244, 87, 36, 0.78);
+    color: white;
+    transition: 1s;
+    cursor : pointer;
+}
+.link a {
+    font-size: 20px;
+    text-decoration: none;
+
+
+}
+
+.link:hover {
+    opacity: 0.6;
+}
+
+
+.link label {
+    cursor: pointer;
+    color: white;
+    font-size:30px;
+}
+@media screen and (max-width: 1550px){
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+@media screen and (max-width: 1200px){
+    .content {
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content_title1 {
+        width: 100%;
+        padding: 0;
+    }
+    .content_title2 {
+        font-size: 25px;
+    }
+    .content_title2-description {
+        font-size: 20px;
+    }
+    .title-of-images {
+        margin:20px 0 0 0 ;
+        padding: 0;
+    }
+    .images {
+        display: flex;
+        flex-direction: column;
+        padding:0;
+    }
+}
