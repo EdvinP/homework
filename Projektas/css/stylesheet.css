@@ -101,17 +101,43 @@ body {
 /*Footer*/
 
 .footer_end {
+    border-top: 2px solid #F45724;
     display: flex;
     flex-direction: column;
-    justify-items: center;
-    border-top: 3px solid #F45724;
-    padding-top: 20px;
 
 }
-
-.footer_contacts {
-    list-style-type: none;
-    align-self: center;
+.footer_end h2 {
     text-align: center;
+    color: white;
+}
+.media ul {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+.media ul li {
+    list-style:none;
+    margin: 10px;
+}
+.media ul li a{
+    background:#3e444a;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius:50%;
+    overflow: hidden;
+    border: 1px solid #3e444a;
+    color:black;
+    font-size: 35px;
+    display: block;
+}
+.media ul li  a .fa {
+    transition:.5s;
     color:white;
+}
+.media ul li a .fa:hover {
+    transform: rotateY(360deg);
+
 }
