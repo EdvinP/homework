@@ -22,16 +22,14 @@
     <?php
         function writeToDocument($vardas, $pavarde)
         {
-
             if(empty($vardas) || empty($pavarde))
             {
-            echo "Neivedete visu laukeliu";
+                echo "Neivedete visu laukeliu";
             }else
             {
-            echo "$vardas, <br>  $pavarde";
+                echo "$vardas, <br>  $pavarde";
             }
         }
-
     ?>
 </body>
 </html>
