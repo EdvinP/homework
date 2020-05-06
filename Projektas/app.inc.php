@@ -5,7 +5,7 @@
         $email = mysqli_real_escape_string ($mysqli, $_POST['email']);
         $message = mysqli_real_escape_string ($mysqli, $_POST['message']);
 
-        if(empty($vardas) && empty($email) && empty($message)) {
+        if(!empty($vardas) && !empty($email) && !empty($message)) {
             if(filter_var($email, FILTER_VALIDATE_EMAIL)){
                 $from = "$email";
                 $to = "kaidio12@gmail.com";
