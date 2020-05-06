@@ -13,20 +13,19 @@
                     header("Location: ../public/kontaktai.php?wrongname");
                     exit();
                 }else {
-                if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                 header("Location ../public/kontaktai.php?wrongemail");
-                    exit();
-                }else {
-                    $from = "$email";
-                    $to = "kaidio12@gmail.com";
-                    $subject = "Nauja zinute";
-                    $autorius = 'Nuo :' .$vardas . ', ' . $email;
-                    $zinute = htmlspecialchars($message);
-                    mail($to, $subject, $autorius, $zinute, $from);
-                    header("Location: ../public/kontaktai.php?mailsend");
-                    exit();
+                    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                        header("Location ../public/kontaktai.php?wrongemail");
+                        exit();
+                    }else {
+                        $from = "$email";
+                        $to = "kaidio12@gmail.com";
+                        $subject = "Nauja zinute";
+                        $autorius = 'Nuo :' .$vardas . ', ' . $email;
+                        $zinute = htmlspecialchars($message);
+                        mail($to, $subject, $autorius, $zinute, $from);
+                        header("Location: ../public/kontaktai.php?mailsend");
+                        exit();
                 }
-
             }
         }
     }
