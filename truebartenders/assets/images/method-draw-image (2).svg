@@ -1,0 +1,17 @@
+<svg width="1280" height="960" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="1282" height="962" id="canvas_background" fill="#1e252b"/>
+  <g id="canvasGrid" display="none">
+   <rect id="svg_4" width="1024" height="768" x="1" y="1" stroke-width="0" fill="url(#gridpattern)"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text fill="#000000" stroke-width="0" x="168.625652" y="265.453125" id="svg_1" font-size="24" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" transform="matrix(31.11384805678187,0,0,1,-5170.434856788068,0) " stroke="#000"/>
+  <text fill="#ffffff" stroke-width="0" stroke-opacity="null" x="349.876187" y="393.167938" id="svg_2" font-size="12" font-family="Oswald, sans-serif" text-anchor="start" xml:space="preserve" transform="matrix(14.02344795488423,0,0,11.702334607956233,-4822.969459562483,-4072.4879848052915) " stroke="#000">trueBartenders</text>
+  <path stroke="#000" fill="#f45724" stroke-width="0" stroke-opacity="null" d="m575.858947,380.780613c-19.233928,-9.9755 0.488055,-29.674084 16.525775,-23.303606c11.934583,-0.026331 23.869219,-0.008962 35.803829,-0.014022c0,-22.70658 0,-45.413199 0,-68.119792c-29.896182,-34.887026 -59.792377,-69.774038 -89.688559,-104.661051c67.666466,-0.24298 135.33356,-0.242722 203.000013,0c-29.358713,35.059394 -58.717439,70.118788 -88.076138,105.178196c0,22.534225 0,45.068436 0,67.602648c17.621628,0.151986 35.273438,-0.413262 52.869223,0.57533c13.854001,3.600181 8.308202,25.611068 -5.155812,23.290782c-41.758112,-0.140565 -83.529553,0.255984 -125.27833,-0.548484l0,0zm86.829598,-123.328526c13.457924,-4.961065 11.565951,-26.427949 -2.870433,-28.616722c-21.777077,-5.803041 -26.479532,30.742751 -3.590335,29.885118c2.210242,0.014048 4.455997,-0.288714 6.460768,-1.268397l0,0z" id="svg_3"/>
+ </g>
+</svg>
