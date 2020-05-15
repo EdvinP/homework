@@ -1,9 +1,6 @@
-
-
 html {
-    margin-top:0;
+    margin-top: 0;
 }
-
 body {
     background-color: #1E252B;
     background-attachment: fixed;
@@ -16,9 +13,7 @@ body {
     padding: 0px;
     overflow-x: hidden;
     animation: fadein 2500ms;
-
 }
-
 .nav {
     text-align: center;
     height: 70px;
@@ -27,7 +22,6 @@ body {
     display: inline-block;
     width: 100%;
 }
-
 .logo {
     width: 70px;
     height: 70px;
@@ -39,24 +33,19 @@ body {
 }
 .menu a {
     text-decoration: none;
-    color:white;
+    color: white;
     margin: 0 15px 0 10px;
     line-height: 70px;
-    clear:right;
+    clear: right;
     text-transform: uppercase;
-
-
 }
 .menu a:hover {
     border-bottom: 3px solid #F45724;
-    padding-bottom:5px;
-    -ms-transition:all .4s ease-in;
-    -webkit-transition:all .4s ease-in;
-    transition:all .4s ease-in;
-
+    padding-bottom: 5px;
+    -ms-transition: all .4s ease-in;
+    -webkit-transition: all .4s ease-in;
+    transition: all .4s ease-in;
 }
-
-
 .menu-label {
     margin: 0 40px 0 0;
     font-size: 26px;
@@ -84,30 +73,16 @@ body {
         margin: 0;
     }
     .menu a:hover {
-    background-color: #F45724;
+        background-color: #F45724;
     }
-
-    #toggle:checked ~ .menu {
+    #toggle:checked~.menu {
         display: block;
     }
 }
-
-/*Header */
-
-
-/*Header end */
-
-/*Content */
-
-
-/*Content end*/
-/*Footer*/
-
 .footer_end {
     border-top: 2px solid #F45724;
     display: flex;
     flex-direction: column;
-
 }
 .footer_end h2 {
     text-align: center;
@@ -118,30 +93,27 @@ body {
     justify-content: center;
     padding: 0px;
 }
-
 .media ul li {
-    list-style:none;
+    list-style: none;
     margin: 10px;
 }
-.media ul li a{
-    background:#3e444a;
+.media ul li a {
+    background: #3e444a;
     width: 50px;
     height: 50px;
     text-align: center;
     line-height: 50px;
-    border-radius:50%;
+    border-radius: 50%;
     overflow: hidden;
     border: 1px solid #3e444a;
-    color:black;
+    color: black;
     font-size: 35px;
     display: block;
 }
-.media ul li  a .fa {
-    transition:.5s;
-    color:white;
+.media ul li a .fa {
+    transition: .5s;
+    color: white;
 }
 .media ul li a .fa:hover {
     transform: rotateY(360deg);
-
 }
-

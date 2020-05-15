@@ -8,7 +8,7 @@
                 <a href="#">Apie mus</a>
                 <a href="../../paslaugos/public/paslaugos.php">Paslaugos</a>
                 <a href="#">Galerija</a>
-                 <a href="../../kontaktai/public/kontaktai.php">Kontaktai</a>
+                <a href="../../kontaktai/public/kontaktai.php">Kontaktai</a>
             </div>
         </div>
     </header>

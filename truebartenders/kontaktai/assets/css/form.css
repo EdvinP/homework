@@ -7,25 +7,24 @@
     justify-content: center;
     animation-name: slide;
     animation-duration: 3s;
-
 }
 @keyframes slide {
-    0% {opacity:0;}
-    100% {opacity:1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-
-
-
 .content_asset {
     font-size: 40px;
-    margin:20px 0 30px 0;
-    color:white;
+    margin: 20px 0 30px 0;
+    color: white;
 }
-
 .adress {
     font-size: 25px;
-    margin:0 0 30px 0;
-    color:white;
+    margin: 0 0 30px 0;
+    color: white;
 }
 .contacts {
     margin: 0 0 5px 0;
@@ -34,42 +33,36 @@
 .form {
     display: flex;
     flex-direction: column;
-    margin:20px;
+    margin: 20px;
 }
-.form input{
+.form input {
     margin: 0 0 50px;
     height: 50px;
     font-size: 18px;
-    border-width:0px;
-    border:none;
-    color:white;
-
+    border-width: 0px;
+    border: none;
+    color: white;
     background-color: #3e444a;
 }
-
-
 .form textarea {
     font-size: 18px;
-    border-width:0px;
-    border:none;
-    color:white;
-
+    border-width: 0px;
+    border: none;
+    color: white;
     background-color: #3e444a;
 }
-
 ::placeholder {
-    color:white;
-    padding:10px;
+    color: white;
+    padding: 10px;
     font-family: sans-serif;
 }
-
 #submit {
     margin: 10px 0 0 0;
     width: 20%;
     color: white;
-    cursor:pointer;
+    cursor: pointer;
     transition: 0.8s;
-    background: -webkit-linear-gradient(0deg, #F45724 50%  , #3e444a 50%);
+    background: -webkit-linear-gradient(0deg, #F45724 50%, #3e444a 50%);
     background-size: 500px 80px;
     height: 50px;
     border: none;
@@ -84,22 +77,21 @@
     padding: 20px;
     justify-content: center;
 }
-
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1300px) {
     .main-content {
         display: flex;
         flex-wrap: wrap-reverse;
     }
     .form {
         width: 100%;
-        margin:20px;
+        margin: 20px;
     }
 }
-@media screen and (max-width: 860px){
+@media screen and (max-width: 860px) {
     .content {
         text-align: center;
     }
     .form {
-        padding:20px;
+        padding: 20px;
     }
 }
