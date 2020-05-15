@@ -1,0 +1,119 @@
+.title {
+    text-align: center;
+    padding-top: 40px;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    display: flex;
+    margin: 50px;
+    padding: 5px;
+    box-shadow: -30px 30px 20px rgba(, 0, 0, 0.2);
+}
+#first {
+    box-shadow: 0 4px 5px 1px rgba(0, 0, 0, 0.4), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#second {
+    box-shadow: 0 4px 5px 1px rgba(0, 0, 0, 0.4), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 20%;
+}
+#third {
+    box-shadow: 0 4px 5px 1px rgba(0, 0, 0, 0.4), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#fourth {
+    box-shadow: 0 4px 5px 1px rgba(0, 0, 0, 0.4), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 20%;
+}
+.second-photo {
+    flex: 2 100%;
+}
+.first-photo {
+    flex: 2 100%;
+}
+.third-photo {
+    flex: 2 100%;
+}
+.fourth-photo {
+    flex: 2 100%;
+}
+.content img {
+    width: 100%;
+}
+.content-description {
+    word-wrap: break-word;
+    text-align: center;
+    background-color: #3e444a;
+    width: 40%;
+    font-size: 17px;
+    padding: 20px 20px 10px 20px;
+    flex: 2 100%;
+}
+.about-service {
+    text-align: center;
+    width: 100%;
+    word-wrap: break-word;
+}
+ul li {
+    text-align: start;
+}
+.content-description a {
+    background-color: #F45724;
+    color: white;
+    border: none;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    text-decoration: none;
+    font-weight: bold;
+    background: -webkit-linear-gradient(0deg, #F45724 50%, #1E252B 50%);
+    background-size: 2300px 80px;
+    transition: 0.7s;
+}
+.content-description a:hover {
+    background-position: 1000px 0;
+}
+@media screen and (max-width: 1650px){
+    .content {
+        flex-wrap:wrap ;
+        width: 80%;
+        justify-content: center;
+        margin: 50px 100px 50px 100px;
+    }
+     #second {
+        flex-wrap: wrap-reverse;
+        margin: 50px 100px 50px 100px;
+    }
+    #fourth {
+        flex-wrap: wrap-reverse;
+        margin: 50px 100px 50px 100px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    #second {
+        margin-left: 0;
+        flex-wrap: wrap-reverse;
+    }
+    #fourth {
+        margin-left: 0;
+        flex-wrap: wrap-reverse;
+    }
+    #first {
+        margin-left: 0;
+    }
+    #third {
+        margin-left: 0;
+    }
+    .content {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .content-description {
+        width: 100%;
+    }
+}
