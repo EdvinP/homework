@@ -1,0 +1,42 @@
+body {
+    box-sizing: border-box;
+}
+form {
+    display: inline-block;
+
+}
+label {
+    font-size: 14px;
+}
+input {
+    display: block;
+    width: 150px;
+    border-radius: 3px;
+    height: 20px;
+}
+ul {
+    list-style: none;
+}
+li {
+    margin : 10px;
+}
+.new, .black {
+    background: grey;
+    width: 30%;
+}
+.new p, .black p {
+    border: 1px solid white;
+    font-size: 20px;
+    color: white;
+}
+button {
+    background: black;
+    color: white;
+    width: 120px;
+}
+.red {
+    padding-left:0px;
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 40px;
+}
