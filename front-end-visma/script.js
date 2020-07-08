@@ -5,12 +5,6 @@ document.getElementById('form').addEventListener('submit', (e)=>{
     let phoneNumber = document.getElementById("phoneNumber").value;
     let email = document.getElementById("mail").value;
     let adress = document.getElementById("adress").value;
-    localStorage.setItem('name', firstName);
-    localStorage.setItem('lastname', lastName);
-    localStorage.setItem('dateBirth', dateBirth);
-    localStorage.setItem('phone', phoneNumber);
-    localStorage.setItem('mail', email);
-    localStorage.setItem('adress', adress);
     create(firstName,lastName, dateBirth, phoneNumber, email, adress);
     e.preventDefault();
 });
@@ -64,12 +58,6 @@ function readUser() {
 
 function deleteUser(i){
     users.splice(i,1);
-    localStorage.removeItem('name', users.firstName);
-    localStorage.removeItem('lastname', users.lastName);
-    localStorage.removeItem('dateBirth', users.dateBirth);
-    localStorage.removeItem('phone', users.phoneNumber);
-    localStorage.removeItem('mail', users.email);
-    localStorage.removeItem('adress', users.adress);
     readUser();
 }
 
@@ -126,12 +114,6 @@ function updateUser(index) {
         users[index].phoneNumber = updateNum;
         users[index].email = updateMail;
         users[index].adress = updateAdrs;
-        localStorage.setItem('name', updateName);
-        localStorage.setItem('lastname', updateLast);
-        localStorage.setItem('dateBirth', updateDate);
-        localStorage.setItem('phone', updateNum);
-        localStorage.setItem('mail', updateMail);
-        localStorage.setItem('adress', updateAdrs);
         readUser();
     }
 }
