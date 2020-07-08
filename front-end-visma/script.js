@@ -1,46 +1,62 @@
 document.getElementById('form').addEventListener('submit', (e)=>{
-    let name = document.getElementById("txtName").value;
-    let lastName = document.getElementById("txtLast").value;
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
     let dateBirth = document.getElementById("dateBirth").value;
-    let phNum = document.getElementById("phNum").value;
+    let phoneNumber = document.getElementById("phoneNumber").value;
     let email = document.getElementById("mail").value;
-    let adrs = document.getElementById("adrs").value;
-    localStorage.setItem('name', name);
+    let adress = document.getElementById("adress").value;
+    localStorage.setItem('name', firstName);
     localStorage.setItem('lastname', lastName);
     localStorage.setItem('dateBirth', dateBirth);
-    localStorage.setItem('phone', phNum);
+    localStorage.setItem('phone', phoneNumber);
     localStorage.setItem('mail', email);
-    localStorage.setItem('adress', adrs);
-    create(name,lastName, dateBirth, phNum, email, adrs);
+    localStorage.setItem('adress', adress);
+    create(firstName,lastName, dateBirth, phoneNumber, email, adress);
     e.preventDefault();
 });
 
 var users = [];
 
-function create(name, lastName, dateBirth, phNum, email, adrs){
+function create(firstName, lastName, dateBirth, phoneNumber, email, adress){
     var user= {
-        name: name,
+        firstName: firstName,
         lastName: lastName,
         dateBirth: dateBirth,
-        phNum: phNum,
+        phoneNumber: phoneNumber,
         email: email,
-        adrs: adrs
+        adress: adress
+        }
+    
+    if(isNaN(phoneNumber)) {
+        alert('Phone number should be only numbers');
+        }else if(!firstName.match(/^[a-zA-Z]+$/) || !lastName.match(/^[a-zA-Z]+$/)) {
+            alert('Only alphabets are allowed');
+                }else if (firstName.length > 12 || lastName.length > 20) {
+                    alert('Name or Last name too long ');
+                        }else if (phoneNumber.length > 11) {
+                            alert('Incorrect phone number');
+                                }else if (!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                                    alert('Incorrect email');
+                                    }else if (adress.length > 30) {
+                                        alert('Adress too long');
+                                            }else{
+                                                users.push(user);
+                                                console.log(users);
+                                                readUser();
+                                                document.getElementById('form').reset();
+                                            }
     }
-    users.push(user);
-    console.log(users);
-    readUser();
-    document.getElementById('form').reset();
-}
+
 function readUser() {
     var userhtml = document.getElementById('user');
     userhtml.innerHTML='';
     for (var i=0; i<users.length;i++){
-        userhtml.innerHTML+= `<div class="new"><p>Name: ${users[i].name}</p>
+        userhtml.innerHTML+= `<div class="new"><p>Name: ${users[i].firstName}</p>
     <p>Lastname: ${users[i].lastName}</p>
     <p>Birthday: ${users[i].dateBirth}</p>
-    <p>Phone number: ${users[i].phNum}</p>
+    <p>Phone number: ${users[i].phoneNumber}</p>
     <p>Email: ${users[i].email}</p>
-    <p>Adress: ${users[i].adrs}</p>
+    <p>Adress: ${users[i].adress}</p>
     <button onClick="editUser('${i}')">Edit</button><button onClick="deleteUser('${i}')">DELETE</button>`
         
     }
@@ -48,12 +64,12 @@ function readUser() {
 
 function deleteUser(i){
     users.splice(i,1);
-    localStorage.removeItem('name', users.name);
+    localStorage.removeItem('name', users.firstName);
     localStorage.removeItem('lastname', users.lastName);
     localStorage.removeItem('dateBirth', users.dateBirth);
-    localStorage.removeItem('phone', users.phNum);
+    localStorage.removeItem('phone', users.phoneNumber);
     localStorage.removeItem('mail', users.email);
-    localStorage.removeItem('adress', users.adrs);
+    localStorage.removeItem('adress', users.adress);
     readUser();
 }
 
@@ -63,22 +79,22 @@ function editUser(index) {
     for(var i=0; i<users.length; i++) {
         if(i==index){
             userhtml.innerHTML+= `<div class = "red">
-            Name: <input id="inputname" required type="text" placeholder="${users[i].name}"><br>
+            Name: <input id="inputname" required type="text" placeholder="${users[i].firstName}"><br>
             Last name: <input id="inputlastname" required type="text" placeholder="${users[i].lastName}"><br>
             Birthday: <input id="inputbirth" required type="date" placeholder="${users[i].dateBirth}"><br>
-            Phone number: <input id="inputnumber" required type="tel" placeholder="${users[i].phNum}"><br>
+            Phone number: <input id="inputnumber" required type="tel" placeholder="${users[i].phoneNumber}"><br>
             Email: <input id="inputmail" required type="email" placeholder="${users[i].email}"><br>
-            Adress: <input id="inputadress" optional type="text" placeholder="${users[i].adrs}"><br>
+            Adress: <input id="inputadress" optional type="text" placeholder="${users[i].adress}"><br>
             <button onClick="updateUser('${i}')">Update</button><button onClick="readUser()">Cancel</button>`
         
             
         }else {
-     userhtml.innerHTML+= `<div class="black"><p>Name: ${users[i].name}</p>
+     userhtml.innerHTML+= `<div class="black"><p>Name: ${users[i].firstName}</p>
     <p>Lastname: ${users[i].lastName}</p>
     <p>Birthday: ${users[i].dateBirth}</p>
-    <p>Phone number: ${users[i].phNum}</p>
+    <p>Phone number: ${users[i].phoneNumber}</p>
     <p>Email: ${users[i].email}</p>
-    <p>Adress: ${users[i].adrs}</p>
+    <p>Adress: ${users[i].adress}</p>
     <button disabled onClick="editUser('${i}')">Edit</button><button disabled onClick="deleteUser('${i}')">DELETE</button>`
         }
     }
@@ -91,17 +107,25 @@ function updateUser(index) {
     var updateNum = document.getElementById('inputnumber').value;
     var updateMail = document.getElementById('inputmail').value;
     var updateAdrs = document.getElementById('inputadress').value;
-    if (updateName == '' || updateLast == '') {
-        alert('wrong');
-    }else if (isNaN(updateNum)) {
-        alert(' Phone number: Should be only numbers');
-    }else  {
-        users[index].name = updateName;
+    if(isNaN(updateNum)) {
+        alert('Phone number should be only numbers');
+        }else if(!updateName.match(/^[a-zA-Z]+$/) || !updateLast.match(/^[a-zA-Z]+$/)) {
+            alert('Only alphabets are allowed');
+            }else if (updateName.length > 12 || updateLast.length > 20) {
+                alert('Too many words');
+                }else if (updateNum.length > 11) {
+                    alert('Incorrect phone number');
+                    }else if (!updateMail.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                        alert('Incorrect email')
+                        }else if (updateAdrs.length > 30) {
+                            alert('Adress too long');
+                            }else{
+        users[index].firstName = updateName;
         users[index].lastName = updateLast;
         users[index].dateBirth = updateDate;
-        users[index].phNum = updateNum;
+        users[index].phoneNumber = updateNum;
         users[index].email = updateMail;
-        users[index].adrs = updateAdrs;
+        users[index].adress = updateAdrs;
         localStorage.setItem('name', updateName);
         localStorage.setItem('lastname', updateLast);
         localStorage.setItem('dateBirth', updateDate);
@@ -111,7 +135,3 @@ function updateUser(index) {
         readUser();
     }
 }
-
-
-
-
