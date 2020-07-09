@@ -12,11 +12,11 @@
         <ul>
             <li>
                 <label for="txtName">First name:</label>
-                <input type="text" required name="firstName" id="firstName">
+                <input type="text" required maxlength="20" name="firstName" id="firstName">
             </li>
              <li>
                 <label for="txtLast">Last name:</label>
-                <input type="text" required name="lastName" id="lastName">
+                <input type="text" required maxlength="30" name="lastName" id="lastName">
             </li>
             <li>
                 <label for="dateBirth">Birthday:</label>
@@ -24,15 +24,15 @@
             </li>
             <li>
                 <label for="phNum">Phone number:</label>
-                <input type="text" required name="phoneNumber" id="phoneNumber">
+                <input type="text" required maxlength="15" name="phoneNumber" id="phoneNumber">
              </li>
             <li>
                 <label for="mail">Email:</label>
-                <input type="email" required name="mail" id="mail">
+                <input type="email" required maxlength="40" name="mail" id="mail">
             </li>
             <li>
                 <label for="adrs">Adress:</label>
-                <input type="text" optional name="adress" id="adress">
+                <input type="text" optional maxlength="40" name="adress" id="adress">
             </li>
             <li>
                 <input type="submit"  value="submit" id="btnAdd">
@@ -43,6 +43,6 @@
     <div class="user" id="user">
         
     </div>
-    <script src="scr.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
