@@ -35,7 +35,7 @@ function create(firstName, lastName, dateBirth, phoneNumber, email, adress){
                                         alert('Adress too long');
                                             }else{
                                                 users.push(user);
-                                                console.log(users);
+                                                localStorage.setItem('user', JSON.parse(users));
                                                 readUser();
                                                 document.getElementById('form').reset();
                                             }
